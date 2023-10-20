@@ -1,0 +1,34 @@
+.navigation {
+    background-color:cadetblue;
+    
+    text-align: center;
+
+}
+.navigation .narbar{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer {
+    background-color:cadetblue;
+
+}
+.noidung1 {
+    display: flex;
+    justify-content: center;
+}
+.vanban1{
+    text-align:center;
+}
+.vanban2{
+    text-align:center;
+}
+.chu1{
+    text-align: center;
+}
+.footer{
+    text-align: left;
+}
+.trangchu .menu{
+    justify-content: space-between;
+}
