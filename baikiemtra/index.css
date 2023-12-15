@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --clr-primary: #2b2e4a;
+  --clr-secondary: #e84545;
+  --font-base: 1rem;
+  --font-scale: 1.618;
+}
+
+*,
+*::after,
+*::before {
+  font-size: 100%;
+  font-family: inherit;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-primary);
+  font-family: Nunito;
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: calc(var(--font-base) * var(--font-scale) * var(--font-scale));
+  padding: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#search-area {
+  position: relative;
+  width: 50%;
+  max-width: 25rem;
+  min-width: 20rem;
+  margin: 0 auto;
+}
+
+form {
+  --radius-border: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+form > * {
+  border: none;
+  padding: 0.4rem 0.6rem;
+}
+
+form > input {
+  border-top-left-radius: var(--radius-border);
+  border-bottom-left-radius: var(--radius-border);
+  width: 100%;
+  color: var(--clr-primary);
+}
+
+form > button {
+  background-color: var(--clr-secondary);
+  border-top-right-radius: var(--radius-border);
+  border-bottom-right-radius: var(--radius-border);
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: white;
+}
+
+#suggestions {
+  position: absolute;
+  background: #1e2034;
+  list-style: none;
+  width: calc(100% - 4.165rem);
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#suggestions > .suggestion {
+  padding: 0.2rem 0 0 0.6rem;
+}
+
+#suggestions > .suggestion:last-of-type {
+  padding-bottom: 0.2rem;
+}
+
+.suggestion:hover {
+  background-color: var(--clr-secondary);
+  transform: scale(1.01);
+}
+
+#poke-card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 25rem;
+  min-width: 20rem;
+  border-radius: 5px;
+  margin: 2rem auto 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  background-color: #22253b;
+  align-items: center;
+  box-shadow: 0 10px 6px -6px #131313;
+}
+
+#poke-name {
+  font-size: calc(var(--font-base) * var(--font-scale));
+  padding: 0.3rem 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+#poke-image {
+  width: 7rem;
+}
+
+#poke-traits {
+  list-style: none;
+  text-align: center;
+}
+
+#poke-traits > li {
+  padding-top: 0.27rem;
+  font-style: italic;
+}
+
+.poke-type-icon {
+  margin: 0 0.25rem;
+  height: 1.7rem;
+}
