@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="./culture.html">
 <link rel="stylesheet" href="./food.html">
 <link rel="stylesheet" href="./trangchu.html">
-<link rel="stylesheet" href="./lienhe.html">
 <link rel="stylesheet" href="./dangtin.html">
 <link rel="stylesheet" href="./css.css">
 <link rel="stylesheet" href="./crud.html">
@@ -37,8 +36,7 @@
         <span></span>
         <li><a href="./dangnhap.html">Đăng nhập </a></li>
         <span></span>
-        <li><a href="./lienhe.html">Liên hệ </a></li>
-        <span></span>
+      
         <li><a href="./crud.html">CRUD</a></li>
       </ul>
     </div>
@@ -55,7 +53,8 @@
     <div class="user-list" id="user-list"></div>
   </div>
 
-      
+  <button onclick="topFunction()" id="backToTopBtn" title="Go to top">Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top Top   </button>
+
       <script>
 document.getElementById('user-form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -96,9 +95,42 @@ function deleteUser(button) {
   const userItem = button.parentElement;
   userItem.remove();
 }
+var mybutton = document.getElementById("backToTopBtn");
+
+
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+
+function topFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0; 
+}
 
       </script>
       <style>
+         #backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: 1525px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
         /* Reset CSS */
 * {
   margin: 0;
