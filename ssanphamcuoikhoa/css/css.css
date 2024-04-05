@@ -1,0 +1,13 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+
+}
+.container{
+    background-color: rgb(27, 21, 82);
+}
+
+a{
+    color: rgb(26, 240, 72);
+    
+}
