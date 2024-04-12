@@ -1,46 +1,121 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-* {
-  box-sizing: border-box;
-}
 body {
-  background: #f6f5f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  height: 100vh;
-  margin: -20px 0 50px;
+    background-image: url("https://img.meta.com.vn/Data/image/2022/04/19/hinh-anh-mua-he-2.jpg");
+    background-size: cover; /* Phủ kín khu vực nền */
+    background-position: center; /* Canh giữa hình ảnh */
+    margin: 0; /* Loại bỏ lề của body */
+    padding: 0; /* Loại bỏ padding của body */
+    font-family: Arial, sans-serif; /* Thiết lập font chung cho toàn bộ trang */
+    /* Các thuộc tính khác có thể được thêm vào tùy thuộc vào yêu cầu của trang web */
 }
-h1 {
-  font-weight: bold;
-  margin: 0;
+
+.register-container .aside-right {
+    width: 28%;
+    height: 100vh;
+    background-color: #fff;
 }
-h2 {
-  text-align: center;
+
+.login-container .aside-left {
+    width: 28%;
+    height: 100vh;
+    background-color: #fff;
 }
-p {
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
+
+.register-container .aside-left .header h3,
+.login-container .aside-right .header h3 { /* Sửa lớp header để áp dụng cho aside-left và aside-right */
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 200;
 }
-span {
-  font-size: 12px;
+
+.register-container .input-name-wrapper,
+.login-container .input-name-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
-a {
-  color: #333;
-  font-size: 14px;
-  text-decoration: none;
-  margin: 15px 0;
+
+.register-container .input-name-wrapper .input-wrapper,
+.login-container .input-name-wrapper .input-wrapper {
+    width: 48%;
 }
-button {
-  border-radius: 20px;
-  border: 1px solid #FF4B2B;
-  background-color: #FF4B2B;
-  color: #FFFFFF;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
+
+#register-form,
+#login-form {
+    padding: 20px;
+}
+
+.register-container .aside-left .form-action,
+.login-container .aside-right .form-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-container .aside-left .form-action button,
+.login-container .aside-right .form-action button { /* Sửa lớp button để áp dụng cho aside-left và aside-right */
+    color: #fff;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.input-wrapper input {
+    border: 1px solid #dbdbdb;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.input-wrapper {
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: #037bfe;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.header {
+    height: 64px;
+    background-color: #037bfe;
+    line-height: 64px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.error {
+    color: red;
+}
+.haha {
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
+    height: 100vh; /* Căn chỉnh chiều cao của phần tử cha */
+}
+.haha {
+    display: flex;
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
+    height: 100vh; /* Căn chỉnh chiều cao của phần tử cha */
+}
+.register-container, .login-container {
+    flex-grow: 1; /* Cho phép ô mở rộng để lấp đầy không gian trống */
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Canh chỉnh nội dung theo trục dọc */
+    justify-content: center; /* Canh chỉnh nội dung theo trục ngang */
+    flex-direction: column; /* Hiển thị phần tử con theo hướng dọc */
+    flex-shrink: 0; /* Ngăn phần tử co lại */
 }

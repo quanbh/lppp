@@ -1,3 +1,9 @@
 .nd1{
     display: flex;
 }
+body {
+    background-image: url(https://demoda.vn/wp-content/uploads/2022/01/background-mua-he-dep.jpg);
+    background-size: cover; /* Hiển thị ảnh nền kích thước cover */
+    background-position: center; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+}

@@ -1,20 +1,42 @@
-$('.register-btn').on('click', function () {
-    $('.title').css('display', 'none');
-    $('.title2').css('display', 'block');
-    $('.login-btn').css('display', 'block');
-    $('.register-btn').css('display', 'none');
-    $('.box-color').css('margin-right', '-380px');
-    $('.box-color').css('background-image', 'linear-gradient(to right, #FF4B2B, #FF416C)');
-    $('.login').css('opacity', '0');
-    $('.register').css('opacity', '1');
-});
-$('.login-btn').on('click', function () {
-    $('.title').css('display', 'block');
-    $('.title2').css('display', 'none');
-    $('.login-btn').css('display', 'none');
-    $('.register-btn').css('display', 'block');
-    $('.box-color').css('margin-right', '0');
-    $('.box-color').css('background-image', 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)');
-    $('.login').css('opacity', '1');
-    $('.register').css('opacity', '0');
+import {app, auth} from "./firebase.js"
+// Import các hàm tới từ firebase để lập trình tính năng xác thực người dùng
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+const registerForm = document.getElementById("register-form");
+console.log("registerForm: ", registerForm);
+
+// Bắt sự kiện khi người dùng submit form
+registerForm.addEventListener("submit", (event) => {
+  // Ngăn sự kiện reload mặc định của trình duyệt.
+  event.preventDefault();
+
+  console.log("Đã vào bắt sự kiện submit");
+
+  const dataSignUp = {
+    firstName: registerForm.firstName.value.trim(),
+    lastName: registerForm.lastName.value.trim(),
+    email: registerForm.email.value.trim(),
+    password: registerForm.password.value,
+    confirmPassword: registerForm.confirmPassword.value,
+  };
+
+  console.log(dataSignUp);
+  // gọi hàm soát lỗi đăng ký người dùng
+
+  // Trả về dữ liệu người dùng đã được lọc và gán lại vào biến dataSignUpClean
+  let dataSignUpClean = controller.register(dataSignUp);
+  //// phương thức xác thực
+  createUserWithEmailAndPassword(auth,dataSignUpClean.email,dataSignUpClean.password)
+.then((userCredential) => {
+   sendEmailVerification(userCredential.user)
+   .then(()=>{
+    console.log("Email verification sent");
+   })
+   .catch((error) =>{
+        console.log("Error",error);
+   })
 })
+});

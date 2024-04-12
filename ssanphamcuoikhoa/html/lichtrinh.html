@@ -17,7 +17,104 @@
             <a href="./lichtrinh.html">Lịch trình</a>
             <a href="./dangkydangnhap.html">Đăng ký/Đăng nhập</a>
         </div>
-
+        
     </div>
+    <div class="container-1">
+        <h1>Lịch Trình</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Thêm công việc mới...">
+            <button type="submit">Thêm</button>
+        </form>
+        <ul id="todo-list"></ul>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container-1 {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+}
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const todoForm = document.getElementById("todo-form");
+    const todoInput = document.getElementById("todo-input");
+    const todoList = document.getElementById("todo-list");
+
+    todoForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const todoText = todoInput.value.trim();
+
+        if (todoText !== "") {
+            const todoItem = document.createElement("li");
+            todoItem.innerHTML = `
+                ${todoText}
+                <button class="delete-btn">Xóa</button>
+            `;
+            todoList.appendChild(todoItem);
+
+            todoInput.value = ""; // Clear input field after adding todo
+        }
+    });
+
+    // Event delegation for delete buttons
+    todoList.addEventListener("click", function(event) {
+        if (event.target.classList.contains("delete-btn")) {
+            event.target.parentElement.remove(); // Remove todo item
+        }
+    });
+});
+
+    </script>
 </body>
 </html>

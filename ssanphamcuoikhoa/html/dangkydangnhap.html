@@ -10,43 +10,87 @@
 
 </head>
 <body>
-    <h2> Sign in/up Form </h2>
-    <div class="container" id="container">
-      <div class="form-container sign-up-container">
-        <form action="#">
-          <h1> Create Account </h1>
-          <span> or use your email for registration </span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button> Sign Up </button>
-        </form>
-      </div>
-      <div class="form-container sign-in-container">
-        <form action="#">
-          <h1> Sign in </h1>
-          <span> or use your account </span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#"> Forgot your password? </a>
-          <button> Sign In </button>
-        </form>
-      </div>
-      <div class="overlay-container">
-        <div class="overlay">
-          <div class="overlay-panel overlay-left">
-            <h1> Welcome Back! </h1>
-            <p> To keep connected with us please login with your personal info </p>
-            <button class="ghost" id="signIn"> Sign In </button>
-          </div>
-          <div class="overlay-panel overlay-right">
-            <h1> Hello, Friend! </h1>
-            <p> Enter your personal details and start your journey with us </p>
-            <button class="ghost" id="signUp"> Sign Up </button>
-          </div>
+  <div class="container">
+  <div class="navbar" >
+      <a href="./trangchu.html">Trang chủ</a>
+      <a href="./bac.html">Miền Bắc</a>
+      <a href="./trung.html">Miền Trung</a>
+      <a href="./nam.html">Miền Nam</a>
+      <a href="./lichtrinh.html">Lịch trình</a>
+      <a href="./dangkydangnhap.html">Đăng ký/Đăng nhập</a>
+  </div>
+  </div>
+  <div class="haha">
+<!-- Code phần đăng ký -->
+<div class="register-container">
+    <div class="aside-right">
+        <div class="header">
+            <h3>Đăng ký</h3>
         </div>
-      </div>
+        <form id="register-form">
+            <div class="input-name-wrapper">
+                <div class="input-wrapper">
+                    <input type="text" name="firstName" placeholder="first name...">
+                    <div class="error" id="first-name-error"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" name="lastName" placeholder="last name...">
+                    <div class="error" id="last-name-error"></div>
+                </div>
+            </div>
+                          <div class="input-wrapper">
+                <input type="text" name="email" placeholder="email...">
+                <div class="error" id="email-error"></div>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="password" placeholder="password...">
+                <div class="error" id="password-error"></div>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" name="confirmPassword" placeholder="confirm password...">
+                <div class="error" id="confirm-password-error"></div>
+            </div>
+
+            <div class="form-action">
+                <span class="cursor" id="redirect-to-login">
+                    Already have an account? Login
+                </span>
+                <button class="btn" type="submit">Register</button>
+            </div>
+        </form>
     </div>
-    
+</div>
+<!-- Code phần đăng nhập -->
+<div class="login-container">
+  <div class="aside-left">
+      <div class="header">
+          <h3>Đăng nhập</h3>
+      </div>
+      <form id="login-form">
+          <div class="input-name-wrapper">
+              <div class="input-wrapper">
+                  <input type="text" name="firstName" placeholder="first name...">
+                  <div class="error" id="first-name-error"></div>
+              </div>
+              <div class="input-wrapper">
+                  <input type="text" name="lastName" placeholder="last name...">
+                  <div class="error" id="last-name-error"></div>
+              </div>
+          </div>
+          <div class="input-wrapper">
+              <input type="password" name="password" placeholder="password...">
+              <div class="error" id="password-error"></div>
+          </div>
+          <div class="form-action">
+              <button class="btn" type="submit">Login</button>
+          </div>
+      </form>
+  </div>
+</div>
+  </div>
+     
+  <script src="../java/controller.js" ></script>
+  <script type="module"  src="../java/dangkydangnhap.js" ></script>
+  <script  type="module" src="../java/firebase.js" ></script>
 </body>
 </html>
