@@ -119,3 +119,64 @@ body {
     flex-direction: column; /* Hiển thị phần tử con theo hướng dọc */
     flex-shrink: 0; /* Ngăn phần tử co lại */
 }
+.haha {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.register-container,
+.login-container {
+    flex-grow: 1;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 20px; /* Thêm padding để tạo khoảng cách giữa các phần tử */
+}
+
+.register-container .aside-right,
+.login-container .aside-left {
+    width: 50%; /* Chiếm 50% chiều rộng của phần tử cha */
+    background-color: #fff;
+}
+
+.register-container .aside-left,
+.login-container .aside-right {
+    display: none; /* Ẩn phần này để ô đăng ký và đăng nhập hiển thị 1 lúc */
+}
+
+.register-container .header h3,
+.login-container .header h3 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 200;
+    background-color: #037bfe;
+    padding: 10px; /* Thêm padding để tạo khoảng cách giữa tiêu đề và nội dung */
+    width: 100%; /* Đảm bảo tiêu đề lấp đầy chiều rộng của phần tử cha */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của phần tử */
+}
+
+.register-container .form-action,
+.login-container .form-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Lấp đầy chiều rộng của phần tử cha */
+    padding: 20px 0; /* Thêm padding để tạo khoảng cách giữa các nút và form */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của phần tử */
+}
+
+.input-wrapper {
+    width: 100%; /* Lấp đầy chiều rộng của phần tử cha */
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các ô input */
+}
+
+.btn {
+    padding: 10px 20px; /* Điều chỉnh kích thước nút */
+}

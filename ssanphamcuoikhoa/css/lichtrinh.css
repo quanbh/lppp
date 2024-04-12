@@ -1,0 +1,43 @@
+.contai {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#post-form {
+    margin-bottom: 20px;
+}
+
+#post-form input[type="text"],
+#post-form textarea,
+#post-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#post-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#post-form button:hover {
+    background-color: #45a049;
+}
+
+#post-list {
+    margin-top: 20px;
+}
+
+#post-list div {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
