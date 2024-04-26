@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="../css/css.css">
 </head>
 <body>
-    <div class="container">
-        <div class="navbar" >
-            <a class="text" href="./trangchu.html">Trang chủ</a>
-            <a href="./bac.html">Miền Bắc</a>
-            <a href="./trung.html">Miền Trung</a>
-            <a href="./nam.html">Miền Nam</a>
-            <a href="./lichtrinh.html">Đăng tin</a>
-            <a href="./login.html">Đăng nhập</a>
-            <a href="./register.html">Đăng ký</a>
-        </div>
-    </div> 
+  <div class="container">
+    <div class="navbar" >
+        <a class="text" href="./trangchu.html">Trang chủ</a>
+        <a href="./bac.html">Miền Bắc</a>
+        <a href="./trung.html">Miền Trung</a>
+        <a href="./nam.html">Miền Nam</a>
+        <a href="./checkbox.html">Những nơi đã đi</a>
+        <a href="../html/lịch-trinh.html">Ghi chú</a>
+        <a href="./lichtrinh.html">Đăng tin</a>
+        <a href="./login.html">Đăng nhập</a>
+        <a href="./register.html">Đăng ký</a>
+    </div>
+</div> 
     
     <main>
-      <h1>Đăng nhập</h1>
+      <h1>Đăng ký</h1>
       <form>
         <div class="form-group">
           <label for="username">Username</label>
@@ -37,13 +39,51 @@
           <input type="password" id="password" name="password" required />
         </div>
         <p>Already have an account? <a href="./login.html">Login Here</a></p>
-        <button type="submit">Sign Up</button>
+        <button class="btn" type="submit">Register</button>
       </form>
     </main>
-
+    <footer>
+      <div class="footer-content">
+        <h4>Người sáng lập:Lê Hoàng Quân</h4>
+        <p>Số Điện Thoại: <a href="">0123 456 789</a></p>
+        <p>Email: <a href="https://mail.google.com/mail/u/0/#inbox">quanbh0402@gmail.com</a></p>
+    </div>
+    <style>
+      footer {
+          background-color: #6053d4;
+          padding: 20px 0;
+          text-align: center;
+      }
+      
+      .footer-content {
+          max-width: 600px;
+          margin: 0 auto;
+      }
+      
+      
+      .footer-content h4 {
+          margin-bottom: 10px;
+      }
+      
+      .footer-content p {
+          margin: 5px 0;
+      }
+      
+      .footer-content h4 {
+          margin-bottom: 10px;
+          font-size: 30px;
+      }
+      
+      .footer-content p {
+          margin: 5px 0;
+          font-size: 30px; 
+      }
+              </style>
+  </footer>
     <script src="../java/controller.js" ></script>
-    <script type="module"  src="../java/dangkydangnhap.js" ></script>
+    <script type="module"  src="../java/register.js" ></script>
     <script  type="module" src="../java/firebase.js" ></script>
+    <script type="module" src="../java/login.js" ></script>
   </body>
 </html>
 </body>

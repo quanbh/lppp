@@ -19,7 +19,6 @@ a{
 
 .navbar {
     background-color: #333;
-    overflow: hidden;
 }
 
 .navbar a {
@@ -46,7 +45,7 @@ a{
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Chọn font chữ */
+    font-family: Arial, sans-serif; 
     background-image: url(https://demoda.vn/wp-content/uploads/2022/01/background-mua-he-dep.jpg);
     background-size: cover;
     background-position: center;
@@ -61,7 +60,7 @@ body {
 
 .navbar {
     background-color: #333;
-    overflow: hidden;
+  
 }
 
 .navbar a {
@@ -83,8 +82,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Chiều cao bằng chiều cao của màn hình */
+    height: 100vh; 
     padding: 20px;
+    height: 375vh;
 }
 
 .bac,
@@ -101,19 +101,19 @@ body {
 }
 
 .nd1 > * {
-    flex: 0 0 300px; /* Chiều rộng cố định của mỗi phần tử */
+    flex: 0 0 300px; 
     margin: 10px;
 }
 
 .nd1 img {
     display: block;
-    width: 100%; /* Đảm bảo hình ảnh lấp đầy phần tử cha */
-    border-radius: 10px; /* Bo tròn góc */
+    width: 100%; 
+    border-radius: 10px; 
 }
 
 .nd1 p {
     text-align: justify;
-    color: #333; /* Màu chữ */
+    color: #333;
 }
 
 h1, h2 {
@@ -122,22 +122,22 @@ h1, h2 {
 }
 
 .container-1 > * {
-    max-width: 800px; /* Đảm bảo các phần tử không quá rộng */
-}
-/* Đối với hình ảnh */
-.nd1 img {
-    display: block;
-    width: 100%; /* Đảm bảo hình ảnh lấp đầy phần tử cha */
-    height: auto; /* Đảm bảo tỷ lệ khung hình được bảo toàn */
-    border-radius: 10px; /* Bo tròn góc */
+    max-width: 800px; 
 }
 
-/* Đối với văn bản */
+.nd1 img {
+    display: block;
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+
 .nd1 p {
     text-align: justify;
-    color: #333; /* Màu chữ */
-    max-height: 200px; /* Giới hạn chiều cao của văn bản */
-    overflow: hidden; /* Ẩn văn bản bị vượt quá chiều cao */
-    text-overflow: ellipsis; /* Hiển thị dấu chấm (...) khi văn bản bị cắt */
+    color: #333; 
+    max-height: 200px; 
+  
+    text-overflow: ellipsis; 
 }
 

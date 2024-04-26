@@ -1,11 +1,10 @@
 body {
     background-image: url("https://img.meta.com.vn/Data/image/2022/04/19/hinh-anh-mua-he-2.jpg");
-    background-size: cover; /* Phủ kín khu vực nền */
-    background-position: center; /* Canh giữa hình ảnh */
-    margin: 0; /* Loại bỏ lề của body */
-    padding: 0; /* Loại bỏ padding của body */
-    font-family: Arial, sans-serif; /* Thiết lập font chung cho toàn bộ trang */
-    /* Các thuộc tính khác có thể được thêm vào tùy thuộc vào yêu cầu của trang web */
+    background-size: cover; 
+    background-position: center; 
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, sans-serif; 
 }
 
 .register-container .aside-right {
@@ -21,7 +20,7 @@ body {
 }
 
 .register-container .aside-left .header h3,
-.login-container .aside-right .header h3 { /* Sửa lớp header để áp dụng cho aside-left và aside-right */
+.login-container .aside-right .header h3 { 
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -54,7 +53,7 @@ body {
 }
 
 .register-container .aside-left .form-action button,
-.login-container .aside-right .form-action button { /* Sửa lớp button để áp dụng cho aside-left và aside-right */
+.login-container .aside-right .form-action button { 
     color: #fff;
 }
 
@@ -102,22 +101,22 @@ body {
 }
 .haha {
     display: flex;
-    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
-    height: 100vh; /* Căn chỉnh chiều cao của phần tử cha */
+    justify-content: space-between; 
+    height: 100vh; 
 }
 .haha {
     display: flex;
-    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử */
-    height: 100vh; /* Căn chỉnh chiều cao của phần tử cha */
+    justify-content: space-between; 
+    height: 100vh; 
 }
 .register-container, .login-container {
-    flex-grow: 1; /* Cho phép ô mở rộng để lấp đầy không gian trống */
+    flex-grow: 1; 
     background-size: cover;
     display: flex;
-    align-items: center; /* Canh chỉnh nội dung theo trục dọc */
-    justify-content: center; /* Canh chỉnh nội dung theo trục ngang */
-    flex-direction: column; /* Hiển thị phần tử con theo hướng dọc */
-    flex-shrink: 0; /* Ngăn phần tử co lại */
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    flex-shrink: 0; 
 }
 .haha {
     display: flex;
@@ -134,18 +133,18 @@ body {
     justify-content: center;
     flex-direction: column;
     flex-shrink: 0;
-    padding: 20px; /* Thêm padding để tạo khoảng cách giữa các phần tử */
+    padding: 20px;
 }
 
 .register-container .aside-right,
 .login-container .aside-left {
-    width: 50%; /* Chiếm 50% chiều rộng của phần tử cha */
+    width: 50%; 
     background-color: #fff;
 }
 
 .register-container .aside-left,
 .login-container .aside-right {
-    display: none; /* Ẩn phần này để ô đăng ký và đăng nhập hiển thị 1 lúc */
+    display: none; 
 }
 
 .register-container .header h3,
@@ -157,9 +156,9 @@ body {
     margin-top: 30px;
     font-weight: 200;
     background-color: #037bfe;
-    padding: 10px; /* Thêm padding để tạo khoảng cách giữa tiêu đề và nội dung */
-    width: 100%; /* Đảm bảo tiêu đề lấp đầy chiều rộng của phần tử cha */
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của phần tử */
+    padding: 10px; 
+    width: 100%;
+    box-sizing: border-box; 
 }
 
 .register-container .form-action,
@@ -167,18 +166,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Lấp đầy chiều rộng của phần tử cha */
-    padding: 20px 0; /* Thêm padding để tạo khoảng cách giữa các nút và form */
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của phần tử */
+    width: 100%; 
+    padding: 20px 0; 
+    box-sizing: border-box; 
 }
 
 .input-wrapper {
-    width: 100%; /* Lấp đầy chiều rộng của phần tử cha */
-    margin-bottom: 20px; /* Tăng khoảng cách giữa các ô input */
+    width: 100%; 
+    margin-bottom: 20px; 
 }
 
 .btn {
-    padding: 10px 20px; /* Điều chỉnh kích thước nút */
+    padding: 10px 20px; 
 }
 body {
     font-family: Arial, sans-serif;
@@ -388,7 +387,7 @@ a:hover {
 }
 body {
     background-image: url(https://demoda.vn/wp-content/uploads/2022/01/background-mua-he-dep.jpg);
-    background-size: cover; /* Hiển thị ảnh nền kích thước cover */
-    background-position: center; /* Căn giữa ảnh nền */
-    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
