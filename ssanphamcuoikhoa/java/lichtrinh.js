@@ -1,9 +1,11 @@
 document.getElementById('post-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+     event.preventDefault();               //Ngăn chặn hành vi mặc định của biểu mẫu sử dụng 
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
     const image = document.getElementById('image').files[0];
+    // Lấy các giá trị từ các trường nhập liệu
     const reader = new FileReader();
+    // Tạo một đối tượng FileReader để đọc tệp hình ảnh.
     reader.onload = function(event) {
       const imageUrl = event.target.result;
       const postList = document.getElementById('post-list');
@@ -17,25 +19,9 @@ document.getElementById('post-form').addEventListener('submit', function(event) 
     };
     reader.readAsDataURL(image);
     document.getElementById('post-form').reset();
+    // làm sạch biểu mẫu bằng cách sử dụng 
   });
   
 var mybutton = document.getElementById("backToTopBtn");
 
 
-window.onscroll = function() {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-
-
-function topFunction() {
-    document.body.scrollTop = 0; 
-    document.documentElement.scrollTop = 0; 
-}

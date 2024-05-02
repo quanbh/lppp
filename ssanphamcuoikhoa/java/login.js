@@ -7,7 +7,7 @@ import { auth } from "./firebase.js";
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  // Ngăn chặn hành vi mặc định của biểu mẫu sử dụng 
   document.querySelector("button[type=submit]").innerText = "Sign In...";
 
   document
@@ -17,11 +17,11 @@ form.addEventListener("submit", (e) => {
   const email = form.email.value.trim();
   const password = form.password.value;
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+  signInWithEmailAndPassword(auth, email, password) //ể đăng nhập người dùng bằng email và mật khẩu.
+    .then((userCredential) => { ///chứa thông tin của người dùng.
       const user = userCredential.user;
       console.log(user);
-      if (!user.emailVerified) {
+      if (!user.emailVerified) /*Kiểm tra nếu email của người dùng chưa được xác minh*/ {
         signOut(auth);
         throw { code: "Email not verified", message: "" };
       }
