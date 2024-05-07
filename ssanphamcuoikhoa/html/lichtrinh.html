@@ -15,7 +15,6 @@
             <a href="./bac.html">Miền Bắc</a>
             <a href="./trung.html">Miền Trung</a>
             <a href="./nam.html">Miền Nam</a>
-            <a href="./checkbox.html">Những nơi đã đi</a>
             <a href="../html/lịch-trinh.html">Ghi chú</a>
             <a href="./lichtrinh.html">Đăng tin</a>
             <a href="./login.html">Đăng nhập</a>
@@ -32,7 +31,12 @@
                 </form>
             
                 <div id="post-list"></div>
-              </div>  
+              </div>
+              <div class="footer-content">
+                <h4>Người sáng lập:Lê Hoàng Quân</h4>
+                <p>Số Điện Thoại: 0123 456 789</p>
+                <p>Email: quanbh0402@gmail.com</p>
+            </div>
             <script>
              document.getElementById('post-form').addEventListener('submit', function(event) {
       event.preventDefault();
@@ -56,6 +60,40 @@
     });
             </script>
     <style>
+        .footer-content{  
+                background-color: #6053d4;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+            }
+
+.footer-content {
+    max-width: 9600px;
+    margin: 0 auto;
+}
+
+
+.footer-content h4 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content h4 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 30px; 
+}
         .contai {
     margin-top: 20px;
 }
