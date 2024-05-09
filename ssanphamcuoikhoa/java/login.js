@@ -14,7 +14,7 @@ form.addEventListener("submit", (e) => {
     .querySelector("button[type=submit]")
     .setAttribute("disabled", "true");
 
-  const email = form.email.value.trim();
+  const email =  form.email.value.trim();
   const password = form.password.value;
 
   signInWithEmailAndPassword(auth, email, password) //ể đăng nhập người dùng bằng email và mật khẩu.

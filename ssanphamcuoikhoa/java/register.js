@@ -39,7 +39,7 @@ form.addEventListener("submit", (e) => {
       alert(errorCode);
     })
     .finally(() => {
-      document.querySelector("button[type=submit]").innerText = "Sign Up";
+       document.querySelector("button[type=submit]").innerText = "Sign Up";
       document.querySelector("button[type=submit]").removeAttribute("disabled");
     });
 });

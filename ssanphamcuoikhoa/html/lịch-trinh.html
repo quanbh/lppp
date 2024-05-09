@@ -35,8 +35,13 @@
         <p>Số Điện Thoại: 0123 456 789</p>
         <p>Email: quanbh0402@gmail.com </p>
     </div>
-        <style>
-            .container-3{
+      
+            
+        
+    
+    <style>
+       
+        .container-3{
                 height: 50vh;
             }
 .footer-content{  
@@ -73,9 +78,6 @@
     margin: 5px 0;
     font-size: 30px; 
 }
-        </style>
-    
-    <style>
         body {
     font-family: Arial, sans-serif;
 }
@@ -133,12 +135,12 @@ li {
     </style>
     <script>
        document.addEventListener("DOMContentLoaded", function() {
-    const todoForm = document.getElementById("todo-form");
-    const todoInput = document.getElementById("todo-input");
-    const todoList = document.getElementById("todo-list");
-    todoForm.addEventListener("submit", function(event) {
-        event.preventDefault(); 
-        const todoText = todoInput.value.trim();
+    const todoForm = document.getElementById("todo-form"); /* Được sử dụng để lắng nghe sự kiện submit của biểu mẫu.*/
+    const todoInput = document.getElementById("todo-input");/*Ô nhập liệu cho người dùng nhập các công việc cần làm.*/
+    const todoList = document.getElementById("todo-list");/* Danh sách hiển thị các công việc cần làm*/
+    todoForm.addEventListener("submit", function(event) { /*Thêm lắng nghe sự kiện submit vào biểu mẫu todoForm*/
+        event.preventDefault(); /*tránh làm tải lại trang.*/
+        const todoText = todoInput.value.trim(); /*Lấy nội dung đã nhập trong ô nhập liệu và loại bỏ các khoảng trắng không cần thiết.*/
         if (todoText !== "") {
             const todoItem = document.createElement("li");
             todoItem.innerHTML = `
@@ -149,8 +151,8 @@ li {
             todoInput.value = "";
         }
     });
-    todoList.addEventListener("click", function(event) {
-        if (event.target.classList.contains("delete-btn")) {
+    todoList.addEventListener("click", function(event) { /*Thêm lắng nghe sự kiện click vào danh sách công việc cần làm (todoList). */
+        if (event.target.classList.contains("delete-btn")) { /*xóa phần tử cha của nút bằng cách sử dụng*/
             event.target.parentElement.remove(); 
         }
     });

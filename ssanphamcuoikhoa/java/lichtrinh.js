@@ -22,6 +22,6 @@ document.getElementById('post-form').addEventListener('submit', function(event) 
     // làm sạch biểu mẫu bằng cách sử dụng 
   });
   
-var mybutton = document.getElementById("backToTopBtn");
+var  mybutton = document.getElementById("backToTopBtn");
 
 

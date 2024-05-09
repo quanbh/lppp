@@ -4,7 +4,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
 
 
-const firebaseConfig = {
+const  firebaseConfig = {
   apiKey: "AIzaSyAHpiZh8guXFK1nKSd1WIEaBNivNiCcoRw",
   authDomain: "nps-jsi-327a3.firebaseapp.com",
   projectId: "nps-jsi-327a3",

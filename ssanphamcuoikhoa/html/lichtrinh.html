@@ -22,7 +22,7 @@
         </div>
     </div> 
               <div class="contai">
-                <h1>Đăng báo</h1>  
+                <h1>Đăng khoảng khắc</h1>  
                 <form id="post-form">
                   <input type="text" id="title" placeholder="Enter title" required>
                   <textarea id="content" placeholder="Enter content" rows="4" required></textarea>
@@ -38,14 +38,14 @@
                 <p>Email: quanbh0402@gmail.com </p>
             </div>
             <script>
-             document.getElementById('post-form').addEventListener('submit', function(event) {
+             document.getElementById('post-form').addEventListener('submit', function(event) { /* Đoạn mã này gán một bộ xử lý sự kiện cho sự kiện "submit" của biểu mẫu với id là "post-form". */
       event.preventDefault();
-      const title = document.getElementById('title').value;
-      const content = document.getElementById('content').value;
-      const image = document.getElementById('image').files[0];
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        const imageUrl = event.target.result;
+      const title = document.getElementById('title').value;/*Lấy giá trị của trường input có id là "title" */
+      const content = document.getElementById('content').value;/*Lấy giá trị của trường input có id là "content" */
+      const image = document.getElementById('image').files[0];/* Lấy tệp hình ảnh từ trường input có id là "image"*/
+      const reader = new FileReader(); /*Tạo một đối tượng FileReader để đọc nội dung của tệp hình ảnh.*/
+      reader.onload = function(event) { /*Thiết lập một hàm xử lý sự kiện để được gọi khi quá trình đọc tệp hình ảnh hoàn thành.*/
+        const imageUrl = event.target.result; /*Lấy URL dữ liệu của hình ảnh đã được đọc.*/
         const postList = document.getElementById('post-list');
         const postDiv = document.createElement('div');
         postDiv.innerHTML = `
@@ -55,21 +55,22 @@
         `;
         postList.appendChild(postDiv);
       };
-      reader.readAsDataURL(image);
-      document.getElementById('post-form').reset();
+      reader.readAsDataURL(image);/* Bắt đầu quá trình đọc tệp hình ảnh dưới dạng URL dữ liệu.*/
+      document.getElementById('post-form').reset(); /*Xóa dữ liệu đã nhập trong biểu mẫu để chuẩn bị cho bài đăng tiếp theo.*/
     });
             </script>
     <style>
            .contai{
-                height: 50vh;
+                /* height: 50vh; */
+                padding-bottom: 200px; 
             }
         .footer-content{  
                 background-color: #6053d4;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     width: 100%;
     text-align: center;
             }
